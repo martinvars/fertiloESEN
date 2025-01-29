@@ -3,27 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Fertilo - Revolucionando la Fertilidad</title>
-  <meta name="description" content="Fertilo ofrece tratamientos innovadores de fertilidad que transforman la FIV y la congelación de óvulos, proporcionando una experiencia más natural y efectiva.">
+  <meta name="description" content="Fertilo ofrece tratamientos de fertilidad innovadores que revolucionan la FIV y la congelación de óvulos, trabajando en armonía con tu cuerpo para cumplir tu sueño de ser madre.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Etiquetas Open Graph -->
-  <meta property="og:title" content="Fertilo - Revolutionizing Fertility">
-  <meta property="og:description" content="Innovative fertility treatments transforming IVF and egg freezing, offering a more natural and effective experience.">
-  <meta property="og:image" content="https://yourdomain.com/images/fertilo-preview.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:type" content="website">
-
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <!-- Country Flag Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
   <style>
-    body {
-      background: linear-gradient(to bottom right, #f5f3ff, #e0e7ff);
-    }
-
     .organic-card {
       border-radius: 30px;
       transition: all 0.3s ease;
@@ -44,8 +32,7 @@
       }
     }
 
-    /* Mostrar el contenido en español por defecto */
-    [lang="en"] {
+    .lang-en {
       display: none;
     }
   </style>
@@ -56,37 +43,71 @@
   <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="text-3xl font-bold text-indigo-600">Fertilo</div>
-      <div class="hidden md:flex space-x-8">
-        <a href="#beneficios" class="text-indigo-600 hover:text-indigo-800" data-lang="es">Beneficios</a>
-        <a href="#tecnologia" class="text-indigo-600 hover:text-indigo-800" data-lang="es">Tecnología</a>
-        <a href="#proceso" class="text-indigo-600 hover:text-indigo-800" data-lang="es">Proceso</a>
-        <a href="#impacto" class="text-indigo-600 hover:text-indigo-800" data-lang="es">Impacto</a>
-        <a href="#contacto" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700" data-lang="es">Contáctanos</a>
-
-        <a href="#beneficios" class="text-indigo-600 hover:text-indigo-800" data-lang="en">Benefits</a>
-        <a href="#tecnologia" class="text-indigo-600 hover:text-indigo-800" data-lang="en">Technology</a>
-        <a href="#proceso" class="text-indigo-600 hover:text-indigo-800" data-lang="en">Process</a>
-        <a href="#impacto" class="text-indigo-600 hover:text-indigo-800" data-lang="en">Impact</a>
-        <a href="#contacto" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700" data-lang="en">Contact Us</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#beneficios" class="text-indigo-600 hover:text-indigo-800">
+          <span class="lang-es">Beneficios</span>
+          <span class="lang-en">Benefits</span>
+        </a>
+        <a href="#tecnologia" class="text-indigo-600 hover:text-indigo-800">
+          <span class="lang-es">Tecnología</span>
+          <span class="lang-en">Technology</span>
+        </a>
+        <a href="#proceso" class="text-indigo-600 hover:text-indigo-800">
+          <span class="lang-es">Proceso</span>
+          <span class="lang-en">Process</span>
+        </a>
+        <a href="#impacto" class="text-indigo-600 hover:text-indigo-800">
+          <span class="lang-es">Impacto</span>
+          <span class="lang-en">Impact</span>
+        </a>
+        <a href="#contacto" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700">
+          <span class="lang-es">Contáctanos</span>
+          <span class="lang-en">Contact Us</span>
+        </a>
+        <!-- Language Switcher -->
+        <button id="es-button" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-es mr-2"></span> ES
+        </button>
+        <button id="en-button" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-gb mr-2"></span> EN
+        </button>
       </div>
       <div class="md:hidden flex items-center">
-        <button class="mobile-menu-button text-indigo-600 focus:outline-none" aria-label="Abrir menú de navegación">
-          <i data-lucide="menu" class="w-8 h-8"></i>
+        <button class="mobile-menu-button text-indigo-600 focus:outline-none">
+          <i class="fas fa-bars fa-2x"></i>
         </button>
       </div>
     </div>
     <div class="mobile-menu hidden md:hidden bg-white/90 backdrop-blur-md">
-      <a href="#beneficios" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="es">Beneficios</a>
-      <a href="#tecnologia" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="es">Tecnología</a>
-      <a href="#proceso" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="es">Proceso</a>
-      <a href="#impacto" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="es">Impacto</a>
-      <a href="#contacto" class="block px-6 py-4 text-white bg-indigo-600 hover:bg-indigo-700" data-lang="es">Contáctanos</a>
-
-      <a href="#beneficios" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="en">Benefits</a>
-      <a href="#tecnologia" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="en">Technology</a>
-      <a href="#proceso" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="en">Process</a>
-      <a href="#impacto" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50" data-lang="en">Impact</a>
-      <a href="#contacto" class="block px-6 py-4 text-white bg-indigo-600 hover:bg-indigo-700" data-lang="en">Contact Us</a>
+      <a href="#beneficios" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50">
+        <span class="lang-es">Beneficios</span>
+        <span class="lang-en">Benefits</span>
+      </a>
+      <a href="#tecnologia" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50">
+        <span class="lang-es">Tecnología</span>
+        <span class="lang-en">Technology</span>
+      </a>
+      <a href="#proceso" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50">
+        <span class="lang-es">Proceso</span>
+        <span class="lang-en">Process</span>
+      </a>
+      <a href="#impacto" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50">
+        <span class="lang-es">Impacto</span>
+        <span class="lang-en">Impact</span>
+      </a>
+      <a href="#contacto" class="block px-6 py-4 text-white bg-indigo-600 hover:bg-indigo-700">
+        <span class="lang-es">Contáctanos</span>
+        <span class="lang-en">Contact Us</span>
+      </a>
+      <!-- Language Switcher -->
+      <div class="flex items-center justify-center space-x-4 py-4">
+        <button id="es-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-es mr-2"></span> ES
+        </button>
+        <button id="en-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-gb mr-2"></span> EN
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -95,79 +116,550 @@
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 z-10">
-          <!-- Título en Español -->
-          <h1 class="text-5xl md:text-6xl font-bold text-indigo-800 mb-6 leading-tight" lang="es">Revolucionando la Fertilidad con Fertilo</h1>
-          <!-- Título en Inglés -->
-          <h1 class="text-5xl md:text-6xl font-bold text-indigo-800 mb-6 leading-tight" lang="en">Revolutionizing Fertility with Fertilo</h1>
-
-          <!-- Descripción en Español -->
-          <p class="text-xl text-gray-600 mb-8" lang="es">Fertilo es un tratamiento de fertilidad innovador desarrollado por Gameto que se centra en la maduración de óvulos fuera del cuerpo, eliminando la necesidad de inyecciones hormonales y mejorando significativamente la experiencia del paciente.</p>
-          <!-- Descripción en Inglés -->
-          <p class="text-xl text-gray-600 mb-8" lang="en">Fertilo is an innovative fertility treatment developed by Gameto, focusing on egg maturation outside the body. It eliminates the need for hormonal injections and significantly enhances the patient experience.</p>
-
+          <h1 class="text-5xl md:text-6xl font-bold text-indigo-800 mb-6 leading-tight">
+            <span class="lang-es">Revolucionando la Fertilidad con Fertilo</span>
+            <span class="lang-en">Revolutionizing Fertility with Fertilo</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            <span class="lang-es">Fertilo es el tratamiento innovador de Gameto que transforma la FIV y la congelación de óvulos, ofreciéndote una experiencia más natural, segura y efectiva.</span>
+            <span class="lang-en">Fertilo is Gameto's innovative treatment that transforms IVF and egg freezing, offering you a more natural, safe, and effective experience.</span>
+          </p>
           <div class="flex space-x-4">
-            <!-- Botones en Español -->
-            <a href="#contacto" class="bg-indigo-600 text-white px-8 py-4 rounded-full hover:bg-indigo-700 transition duration-300" lang="es">Comienza Tu Viaje</a>
-            <a href="#beneficios" class="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-full hover:bg-indigo-50 transition duration-300" lang="es">Descubre Más</a>
-            <!-- Botones en Inglés -->
-            <a href="#contacto" class="bg-indigo-600 text-white px-8 py-4 rounded-full hover:bg-indigo-700 transition duration-300" lang="en">Start Your Journey</a>
-            <a href="#beneficios" class="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-full hover:bg-indigo-50 transition duration-300" lang="en">Learn More</a>
+            <a href="#contacto" class="bg-indigo-600 text-white px-8 py-4 rounded-full hover:bg-indigo-700 transition duration-300">
+              <span class="lang-es">Comienza Tu Viaje</span>
+              <span class="lang-en">Start Your Journey</span>
+            </a>
+            <a href="#beneficios" class="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-full hover:bg-indigo-50 transition duration-300">
+              <span class="lang-es">Descubre Más</span>
+              <span class="lang-en">Learn More</span>
+            </a>
           </div>
         </div>
         <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-          <i data-lucide="baby" class="w-64 h-64 text-pink-500"></i>
+          <i class="fas fa-baby w-64 h-64 text-indigo-600"></i>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Continuar con el contenido de las demás secciones de manera similar... -->
+  <!-- Sección de Beneficios -->
+  <section id="beneficios" class="py-20 relative bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-indigo-800 mb-16">
+        <span class="lang-es">Beneficios de Fertilo</span>
+        <span class="lang-en">Benefits of Fertilo</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Más Natural -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-leaf w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Natural</span>
+            <span class="lang-en">More Natural</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Fertilo replica el entorno ovárico natural, promoviendo un desarrollo más saludable de los óvulos y mejorando los resultados del tratamiento.</span>
+            <span class="lang-en">Fertilo replicates the natural ovarian environment, promoting healthier egg development and improving treatment outcomes.</span>
+          </p>
+        </div>
+        <!-- Más Seguro -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-shield-alt w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Seguro</span>
+            <span class="lang-en">Safer</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Al eliminar la necesidad de inyecciones hormonales, reducimos significativamente el riesgo de efectos secundarios y complicaciones como el síndrome de hiperestimulación ovárica.</span>
+            <span class="lang-en">By eliminating the need for hormonal injections, we significantly reduce the risk of side effects and complications like ovarian hyperstimulation syndrome.</span>
+          </p>
+        </div>
+        <!-- Más Rápido -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-bolt w-8 h-8 text-yellow-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Rápido</span>
+            <span class="lang-en">Faster</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">El proceso de maduración de óvulos con Fertilo es significativamente más rápido, tomando aproximadamente un día en lugar de semanas.</span>
+            <span class="lang-en">The egg maturation process with Fertilo is significantly faster, taking approximately one day instead of weeks.</span>
+          </p>
+        </div>
+        <!-- Más Cómodo -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-spa w-8 h-8 text-pink-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Cómodo</span>
+            <span class="lang-en">More Comfortable</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Sin inyecciones y menos visitas a la clínica, ofrecemos una experiencia más cómoda y menos disruptiva para las mujeres.</span>
+            <span class="lang-en">With no injections and fewer clinic visits, we offer a more comfortable and less disruptive experience for women.</span>
+          </p>
+        </div>
+        <!-- Más Eficaz -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-chart-line w-8 h-8 text-purple-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Eficaz</span>
+            <span class="lang-en">More Effective</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Nuestro enfoque puede mejorar la calidad de los óvulos y aumentar las posibilidades de una fertilización y un embarazo exitosos.</span>
+            <span class="lang-en">Our approach can improve egg quality and increase the chances of successful fertilization and pregnancy.</span>
+          </p>
+        </div>
+        <!-- Más Accesible -->
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-globe w-8 h-8 text-indigo-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Más Accesible</span>
+            <span class="lang-en">More Accessible</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Un tratamiento más corto y seguro podría reducir los costos, haciendo que la FIV y la congelación de óvulos sean más accesibles para más personas.</span>
+            <span class="lang-en">A shorter and safer treatment could reduce costs, making IVF and egg freezing more accessible to more people.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Scripts -->
+  <!-- Sección de Tecnología -->
+  <section id="tecnologia" class="py-20 bg-indigo-50 relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-indigo-800 mb-16">
+        <span class="lang-es">Nuestra Tecnología Innovadora</span>
+        <span class="lang-en">Our Innovative Technology</span>
+      </h2>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 flex justify-center">
+          <i class="fas fa-vial w-64 h-64 text-indigo-600"></i>
+        </div>
+        <div class="md:w-1/2">
+          <p class="text-xl text-gray-600 mb-6">
+            <span class="lang-es">Fertilo utiliza una combinación única de biotecnología avanzada para revolucionar el tratamiento de fertilidad.</span>
+            <span class="lang-en">Fertilo utilizes a unique combination of advanced biotechnology to revolutionize fertility treatment.</span>
+          </p>
+          <div class="space-y-6">
+            <!-- Células de Soporte Ovárico -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-dna w-6 h-6 text-pink-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Células de Soporte Ovárico (OSC)</span>
+                  <span class="lang-en">Ovarian Support Cells (OSC)</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Utilizamos OSC derivadas de células madre pluripotentes inducidas que imitan la función de las células ováricas naturales, cruciales para la maduración de los óvulos.</span>
+                  <span class="lang-en">We use OSC derived from induced pluripotent stem cells that mimic the function of natural ovarian cells, crucial for egg maturation.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Sistema de Cocultivo -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-hand-holding-heart w-6 h-6 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Sistema de Cocultivo Dinámico</span>
+                  <span class="lang-en">Dynamic Coculture System</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Nuestros óvulos se nutren junto con las OSC en un entorno que recrea un ovario juvenil, fomentando una comunicación celular natural.</span>
+                  <span class="lang-en">Our eggs are nurtured alongside OSC in an environment that recreates a youthful ovary, fostering natural cell communication.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Señalización Hormonal Natural -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-bell w-6 h-6 text-yellow-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Señalización Hormonal Natural</span>
+                  <span class="lang-en">Natural Hormonal Signaling</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Las OSC producen y responden a hormonas clave, permitiendo una maduración de los óvulos sin necesidad de intervenciones hormonales externas.</span>
+                  <span class="lang-en">OSC produce and respond to key hormones, allowing egg maturation without the need for external hormonal interventions.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Maduración Acelerada -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-tachometer-alt w-6 h-6 text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Maduración Acelerada</span>
+                  <span class="lang-en">Accelerated Maturation</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Nuestro proceso permite que los óvulos maduren en aproximadamente un día, emulando el proceso natural dentro de un ovario sano.</span>
+                  <span class="lang-en">Our process allows eggs to mature in about one day, emulating the natural process within a healthy ovary.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección del Proceso de Tratamiento -->
+  <section id="proceso" class="py-20 bg-white relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-indigo-800 mb-16">
+        <span class="lang-es">Proceso de Tratamiento</span>
+        <span class="lang-en">Treatment Process</span>
+      </h2>
+      <div class="grid md:grid-cols-4 gap-12">
+        <!-- Extracción de Óvulos -->
+        <div class="organic-card bg-white p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-egg w-8 h-8 text-pink-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Extracción de Óvulos</span>
+            <span class="lang-en">Egg Retrieval</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Recogemos los óvulos de los ovarios de la paciente, similar al paso inicial en la FIV tradicional.</span>
+            <span class="lang-en">We collect eggs from the patient's ovaries, similar to the initial step in traditional IVF.</span>
+          </p>
+        </div>
+        <!-- Cocultivo -->
+        <div class="organic-card bg-white p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-seedling w-8 h-8 text-indigo-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Cocultivo</span>
+            <span class="lang-en">Coculture</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Los óvulos extraídos se colocan en nuestro sistema de cocultivo con las OSC para iniciar la maduración.</span>
+            <span class="lang-en">Extracted eggs are placed in our coculture system with OSC to initiate maturation.</span>
+          </p>
+        </div>
+        <!-- Maduración -->
+        <div class="organic-card bg-white p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-hourglass-half w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Maduración</span>
+            <span class="lang-en">Maturation</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">En este ambiente, los óvulos maduran en aproximadamente un día, listos para el siguiente paso.</span>
+            <span class="lang-en">In this environment, eggs mature in about one day, ready for the next step.</span>
+          </p>
+        </div>
+        <!-- Fertilización o Congelación -->
+        <div class="organic-card bg-white p-8 shadow-lg text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-gift w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
+            <span class="lang-es">Fertilización/Congelación</span>
+            <span class="lang-en">Fertilization/Freezing</span>
+          </h3>
+          <p class="text-gray-600">
+            <span class="lang-es">Una vez maduros, los óvulos pueden ser fertilizados o congelados para uso futuro, según tu plan de tratamiento.</span>
+            <span class="lang-en">Once mature, eggs can be fertilized or frozen for future use, according to your treatment plan.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Impacto -->
+  <section id="impacto" class="py-20 bg-indigo-50 relative">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-indigo-800 mb-16">
+        <span class="lang-es">Impacto de Fertilo</span>
+        <span class="lang-en">Impact of Fertilo</span>
+      </h2>
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <p class="text-xl text-gray-600 mb-6">
+            <span class="lang-es">Fertilo representa un cambio de paradigma en el tratamiento de la fertilidad. Al abordar las limitaciones de la FIV tradicional, ofrecemos un enfoque más centrado en el paciente que prioriza la seguridad, la comodidad y la eficacia.</span>
+            <span class="lang-en">Fertilo represents a paradigm shift in fertility treatment. By addressing the limitations of traditional IVF, we offer a more patient-centered approach that prioritizes safety, comfort, and efficacy.</span>
+          </p>
+          <div class="space-y-6">
+            <!-- Transformando la Fertilidad -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-sync-alt w-6 h-6 text-indigo-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Transformando la Fertilidad</span>
+                  <span class="lang-en">Transforming Fertility</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Nuestra tecnología tiene el potencial de transformar el panorama de la fertilidad y ayudar a más familias a alcanzar sus objetivos reproductivos.</span>
+                  <span class="lang-en">Our technology has the potential to transform the fertility landscape and help more families achieve their reproductive goals.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Accesibilidad -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-universal-access w-6 h-6 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Mayor Accesibilidad</span>
+                  <span class="lang-en">Greater Accessibility</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Un tratamiento más rápido y seguro puede reducir los costos, haciendo que los tratamientos de fertilidad sean más accesibles para todos.</span>
+                  <span class="lang-en">A faster and safer treatment can reduce costs, making fertility treatments more accessible to everyone.</span>
+                </p>
+              </div>
+            </div>
+            <!-- Enfoque en el Paciente -->
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-heart w-6 h-6 text-pink-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">
+                  <span class="lang-es">Enfoque en el Paciente</span>
+                  <span class="lang-en">Patient Focused</span>
+                </h3>
+                <p class="text-gray-600">
+                  <span class="lang-es">Priorizamos la seguridad y comodidad de las pacientes, ofreciendo un tratamiento menos invasivo y más amigable.</span>
+                  <span class="lang-en">We prioritize patient safety and comfort, offering a less invasive and friendlier treatment.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <i class="fas fa-bullseye w-64 h-64 text-indigo-600"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Visión de Gameto -->
+  <section class="py-20 bg-white relative">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-indigo-800 mb-12">
+          <span class="lang-es">Nuestra Visión en Gameto</span>
+          <span class="lang-en">Our Vision at Gameto</span>
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          <span class="lang-es">Gameto es una empresa liderada por mujeres, impulsada por la misión de redefinir la salud de la mujer. Reconocemos los desafíos en los viajes reproductivos y estamos comprometidos a desarrollar soluciones innovadoras como Fertilo para mejorar la experiencia de las pacientes.</span>
+          <span class="lang-en">Gameto is a women-led company driven by the mission to redefine women's health. We recognize the challenges in reproductive journeys and are committed to developing innovative solutions like Fertilo to improve patient experiences.</span>
+        </p>
+        <i class="fas fa-users w-32 h-32 text-indigo-600 mx-auto mb-6"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Testimonios -->
+  <section class="py-20 bg-indigo-800 text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-12">
+          <span class="lang-es">Historias que Inspiran</span>
+          <span class="lang-en">Inspiring Stories</span>
+        </h2>
+        <div class="organic-card bg-indigo-700 p-8 md:p-12">
+          <p class="text-xl italic mb-6">
+            <span class="lang-es">"Fertilo cambió nuestra vida. El proceso fue rápido y sin complicaciones, y ahora esperamos nuestro primer hijo. No podríamos estar más agradecidos."</span>
+            <span class="lang-en">"Fertilo changed our lives. The process was quick and hassle-free, and now we're expecting our first child. We couldn't be more grateful."</span>
+          </p>
+          <div class="flex items-center justify-center mt-6">
+            <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
+              <i class="fas fa-user w-6 h-6 text-white"></i>
+            </div>
+            <div class="ml-4 text-left">
+              <div class="font-semibold">
+                <span class="lang-es">Laura y Carlos</span>
+                <span class="lang-en">Laura and Carlos</span>
+              </div>
+              <div>
+                <span class="lang-es">Pacientes de Fertilo</span>
+                <span class="lang-en">Fertilo Patients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="py-20 bg-indigo-900 text-white relative">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">
+          <span class="lang-es">Comienza Tu Historia Hoy</span>
+          <span class="lang-en">Start Your Story Today</span>
+        </h2>
+        <p class="text-xl mb-12">
+          <span class="lang-es">Da el primer paso hacia la maternidad con Fertilo. Estamos aquí para acompañarte en este hermoso viaje.</span>
+          <span class="lang-en">Take the first step towards motherhood with Fertilo. We are here to accompany you on this beautiful journey.</span>
+        </p>
+        <form class="space-y-6" action="#" method="POST">
+          <input type="text" name="name" placeholder="Ingresa tu nombre" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
+          <input type="text" name="name_en" placeholder="Enter your name" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
+          <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
+          <input type="email" name="email_en" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
+          <button type="submit" class="bg-white text-indigo-800 px-12 py-4 rounded-full font-semibold hover:bg-indigo-100 transition duration-300">
+            <span class="lang-es">Solicitar Información</span>
+            <span class="lang-en">Request Information</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="bg-indigo-950 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Fertilo</h3>
+          <p class="text-indigo-200">
+            <span class="lang-es">Revolucionando el tratamiento de fertilidad a través de la innovación inspirada en la naturaleza.</span>
+            <span class="lang-en">Revolutionizing fertility treatment through nature-inspired innovation.</span>
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">
+            <span class="lang-es">Empresa</span>
+            <span class="lang-en">Company</span>
+          </h4>
+          <ul class="space-y-2 text-indigo-200">
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Sobre Nosotros</span>
+              <span class="lang-en">About Us</span>
+            </a></li>
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Carreras</span>
+              <span class="lang-en">Careers</span>
+            </a></li>
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Contacto</span>
+              <span class="lang-en">Contact</span>
+            </a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">
+            <span class="lang-es">Recursos</span>
+            <span class="lang-en">Resources</span>
+          </h4>
+          <ul class="space-y-2 text-indigo-200">
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Blog</span>
+              <span class="lang-en">Blog</span>
+            </a></li>
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Investigación</span>
+              <span class="lang-en">Research</span>
+            </a></li>
+            <li><a href="#" class="hover:text-white">
+              <span class="lang-es">Preguntas Frecuentes</span>
+              <span class="lang-en">FAQs</span>
+            </a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">
+            <span class="lang-es">Síguenos</span>
+            <span class="lang-en">Follow Us</span>
+          </h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-indigo-200 hover:text-white">
+              <i class="fab fa-facebook-f fa-lg"></i>
+            </a>
+            <a href="#" class="text-indigo-200 hover:text-white">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="#" class="text-indigo-200 hover:text-white">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="#" class="text-indigo-200 hover:text-white">
+              <i class="fab fa-linkedin-in fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-indigo-200">
+        &copy; 2023 Gameto Inc. <span class="lang-es">Todos los derechos reservados.</span><span class="lang-en">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para el cambio de idioma y menú móvil -->
   <script>
+    const langEnElements = document.querySelectorAll('.lang-en');
+    const langEsElements = document.querySelectorAll('.lang-es');
+    const esButton = document.getElementById('es-button');
+    const enButton = document.getElementById('en-button');
+    const esButtonMobile = document.getElementById('es-button-mobile');
+    const enButtonMobile = document.getElementById('en-button-mobile');
+
+    function setLanguage(language) {
+      if (language === 'en') {
+        langEnElements.forEach(el => el.style.display = '');
+        langEsElements.forEach(el => el.style.display = 'none');
+      } else {
+        langEnElements.forEach(el => el.style.display = 'none');
+        langEsElements.forEach(el => el.style.display = '');
+      }
+    }
+
+    esButton.addEventListener('click', () => setLanguage('es'));
+    enButton.addEventListener('click', () => setLanguage('en'));
+
+    esButtonMobile.addEventListener('click', () => {
+      setLanguage('es');
+      menu.classList.toggle('hidden'); // Close mobile menu
+    });
+
+    enButtonMobile.addEventListener('click', () => {
+      setLanguage('en');
+      menu.classList.toggle('hidden'); // Close mobile menu
+    });
+
+    // Initialize default language
+    setLanguage('es');
+
+    // Script para Mobile Menu
     const btn = document.querySelector('.mobile-menu-button');
     const menu = document.querySelector('.mobile-menu');
-    const menuLinks = document.querySelectorAll('.mobile-menu a');
 
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
-
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
-    });
-
-    document.getElementById("contact-form")?.addEventListener("submit", function(event) {
-      event.preventDefault();
-      document.getElementById("success-message")?.classList.remove("hidden");
-      this.reset();
-    });
-
-    // Inicializar Lucide Icons
-    lucide.createIcons();
-
-    // Detectar el idioma del navegador y mostrar el contenido apropiado
-    function showContentByLanguage() {
-      const userLang = navigator.language || navigator.userLanguage;
-      const lang = userLang.startsWith('es') ? 'es' : 'en';
-
-      document.querySelectorAll('[lang]').forEach(el => {
-        el.style.display = el.getAttribute('lang') === lang ? '' : 'none';
-      });
-
-      // Actualizar los enlaces del menú para que apunten a las secciones correctas
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        const href = link.getAttribute('href');
-        const sectionId = href.split('#')[1];
-        if (sectionId) {
-          link.setAttribute('href', `#${sectionId}`);
-        }
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', showContentByLanguage);
   </script>
 
 </body>
